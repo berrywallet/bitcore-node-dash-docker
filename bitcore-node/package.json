@@ -1,6 +1,6 @@
 {
   "description": "Bitcore Dash + Insight API + Insight UI in Docker",
-  "repository": "https://github.com/BerryWallet/bitcore-node-dash-docker",
+  "repository": "https://github.com/berrywallet/bitcore-node-dash-docker",
   "license": "LGPL-3.0",
   "readme": "README.md",
   "dependencies": {

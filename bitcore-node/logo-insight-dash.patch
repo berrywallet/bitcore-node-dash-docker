@@ -1,0 +1,34 @@
+diff --git a/public/index.html b/public/index.html
+index 4f1d72f..d07150e 100644
+--- a/public/index.html
++++ b/public/index.html
+@@ -6,9 +6,9 @@
+ 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+ 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+ 	<meta name="fragment" content="!">
+-	<title data-ng-bind="$root.title + $root.titleDetail + ' | Insight'">Insight</title>
++	<title data-ng-bind="$root.title + $root.titleDetail + ' | Dash Insight by Berrywallet'">Dash Insight by Berrywallet</title>
+ 	<meta name="keywords" content="bitcoins, transactions, blocks, address, block chain, best block, mining difficulty, hash serialized">
+-	<meta name="description" content="Dash Insight. View detailed information on all dash transactions and block. {{ $root.title + $root.titleDetail }}">
++	<meta name="description" content="Berrywallet and Dash Insight - together forever. View detailed information on all dash transactions and block. {{ $root.title + $root.titleDetail }}">
+ 	<link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,400italic">
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
+diff --git a/public/views/includes/header.html b/public/views/includes/header.html
+index a4bb5c7..54e6216 100644
+--- a/public/views/includes/header.html
++++ b/public/views/includes/header.html
+@@ -8,9 +8,10 @@
+         <span class="icon-bar"></span>
+       </button>
+       <div>
+-        <a class="insight navbar-brand" href="." style="margin-top: 5px;">
+-        <img src="./img/DASHlogo_white.png" style="width: 150px; height: auto;" alt="dash_logo">
+-      </a>
++        <div class="insight navbar-brand" style="margin-top: 5px;position: relative;padding: 3px 15px;">
++          <a href="."><img src="./img/DASHlogo_white.png" style="width: 150px; height: auto;" alt="dash_logo"></a>
++          <a href="https://berrywallet.io" title="Tastiest cryptocurrency wallet" style="position: absolute;cursor: pointer;color: white;font-size: 10px;bottom: 3px;background: rgb(178, 36, 239);border-radius: 3px;padding: 3px 8px;right: 15px;line-height: 1;">by Berrywallet</a>
++        </div>
+       </div>
+     </div>
+     <div class="navbar-collapse collapse" collapse="$root.isCollapsed">

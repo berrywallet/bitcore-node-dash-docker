@@ -10,6 +10,7 @@ RUN apt-get update && \
   python \
   gettext-base \
   jq \
+  patch \
   && \
   wget https://github.com/Yelp/dumb-init/releases/download/v1.2.1/dumb-init_1.2.1_amd64.deb && \
   dpkg -i dumb-init_*.deb
@@ -20,7 +21,8 @@ WORKDIR /root/dash-node
 COPY bitcore-node ./
 RUN npm config set package-lock false && \
   npm install && \
-  ln -s /root/.bitcore/data/dashd ./dashd
+  ln -s /root/.bitcore/data/dashd ./dashd && \
+  cat logo-insight-dash.patch | patch -p1 -d node_modules/insight-ui-dash
 
 RUN apt-get purge -y \
   g++ make python gcc && \
